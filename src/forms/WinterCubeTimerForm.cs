@@ -11,7 +11,6 @@ using Kociemba;
 namespace WinterCubeTimer.forms
 {
     public partial class WinterCubeTimerForm : Form {
-        private string pythonScriptFileName;
         private string cubeStateFileName;
         private string cubeSolutionFileName;
         public enum TimerStates {
@@ -97,7 +96,6 @@ namespace WinterCubeTimer.forms
             InitializeComponent();
             validateTables();
             inspectionEnabled = Config.getInstance().inspectionEnabled;
-            pythonScriptFileName = Config.getInstance().pythonScriptFileName;
             cubeStateFileName = Config.getInstance().cubeStateFileName;
             cubeSolutionFileName = Config.getInstance().cubeSolutionFileName;
             isPlusTwoInInspection = false;

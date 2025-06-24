@@ -1,7 +1,1 @@
-﻿{
-  "timesConnectionString": "Data Source=times.db",
-  "inspectionEnabled": true,
-  "pythonScriptFileName": "solveCube.py",
-  "cubeStateFileName": "cubeState.json",
-  "cubeSolutionFileName": "cubeSolution.txt"
-}
+﻿{"timesConnectionString":"Data Source=times.db","inspectionEnabled":true,"cubeStateFileName":"cubeState.json","cubeSolutionFileName":"cubeSolution.txt"}

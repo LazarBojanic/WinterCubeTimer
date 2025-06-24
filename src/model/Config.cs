@@ -4,7 +4,6 @@ using System.Reflection;
 public class Config {
     public string timesConnectionString {  get; set; }
     public bool inspectionEnabled { get; set; }
-    public string pythonScriptFileName { get; set; }
     public string cubeStateFileName { get; set; }
     public string cubeSolutionFileName { get; set; }
     private static Config instance {  get; set; }
@@ -12,7 +11,6 @@ public class Config {
     public static string defaultConfigJson = @"{
                           ""timesConnectionString"": ""Data Source=times.db"",
                           ""inspectionEnabled"": true,
-                          ""pythonScriptFileName"": ""solveCube.py"",
                           ""cubeStateFileName"": ""cubeState.json"",
                           ""cubeSolutionFileName"": ""cubeSolution.txt""
                         }
@@ -27,10 +25,9 @@ public class Config {
         string configJson = File.ReadAllText(configFileName, System.Text.Encoding.UTF8);
         return Serializer.deserialize<Config>(configJson);
     }
-    public Config(string timesConnectionString, bool inspectionEnabled, string pythonScriptFileName, string cubeStateFileName, string cubeSolutionFileName) {
+    public Config(string timesConnectionString, bool inspectionEnabled, string cubeStateFileName, string cubeSolutionFileName) {
         this.timesConnectionString = timesConnectionString;
         this.inspectionEnabled = inspectionEnabled;
-        this.pythonScriptFileName = pythonScriptFileName;
         this.cubeStateFileName = cubeStateFileName;
         this.cubeSolutionFileName = cubeSolutionFileName;
     }
