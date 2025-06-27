@@ -452,6 +452,7 @@ namespace WinterCubeTimer.view {
         }
 
         private async void buttonNewScramble_MouseClick(object sender, MouseEventArgs e) {
+            generateScramble();
             await displayScramble();
         }
 
