@@ -207,7 +207,7 @@
             labelScramble.Anchor = System.Windows.Forms.AnchorStyles.Top;
             labelScramble.AutoSize = true;
             labelScramble.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            labelScramble.Location = new System.Drawing.Point(487, 68);
+            labelScramble.Location = new System.Drawing.Point(487, 86);
             labelScramble.Name = "labelScramble";
             labelScramble.Size = new System.Drawing.Size(152, 37);
             labelScramble.TabIndex = 1;
