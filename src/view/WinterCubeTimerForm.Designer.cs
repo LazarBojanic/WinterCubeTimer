@@ -1,4 +1,4 @@
-﻿namespace WinterCubeTimer.forms {
+﻿namespace WinterCubeTimer.view {
     partial class WinterCubeTimerForm {
         /// <summary>
         /// Required designer variable.
@@ -103,7 +103,7 @@
             panelLeft0 = new System.Windows.Forms.Panel();
             flowLayoutPanelTimes = new System.Windows.Forms.FlowLayoutPanel();
             panelStats = new System.Windows.Forms.Panel();
-            labelBestTime = new System.Windows.Forms.Label();
+            labelBestTimeOverall = new System.Windows.Forms.Label();
             labelAverageOfTwelve = new System.Windows.Forms.Label();
             labelAverageOfFive = new System.Windows.Forms.Label();
             comboBoxSession = new System.Windows.Forms.ComboBox();
@@ -885,7 +885,7 @@
             // 
             panelStats.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
             panelStats.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            panelStats.Controls.Add(labelBestTime);
+            panelStats.Controls.Add(labelBestTimeOverall);
             panelStats.Controls.Add(labelAverageOfTwelve);
             panelStats.Controls.Add(labelAverageOfFive);
             panelStats.Location = new System.Drawing.Point(12, 671);
@@ -895,13 +895,13 @@
             // 
             // labelBestTime
             // 
-            labelBestTime.AutoSize = true;
-            labelBestTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            labelBestTime.Location = new System.Drawing.Point(15, 83);
-            labelBestTime.Name = "labelBestTime";
-            labelBestTime.Size = new System.Drawing.Size(99, 24);
-            labelBestTime.TabIndex = 2;
-            labelBestTime.Text = "Best Time:";
+            labelBestTimeOverall.AutoSize = true;
+            labelBestTimeOverall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            labelBestTimeOverall.Location = new System.Drawing.Point(15, 83);
+            labelBestTimeOverall.Name = "labelBestTimeOverall";
+            labelBestTimeOverall.Size = new System.Drawing.Size(99, 24);
+            labelBestTimeOverall.TabIndex = 2;
+            labelBestTimeOverall.Text = "Best Time:";
             // 
             // labelAverageOfTwelve
             // 
@@ -1073,7 +1073,7 @@
         private Button buttonLeftTurn;
         public FlowLayoutPanel flowLayoutPanelTimes;
         private Panel panelStats;
-        private Label labelBestTime;
+        private Label labelBestTimeOverall;
         private Label labelAverageOfTwelve;
         private Label labelAverageOfFive;
         private ComboBox comboBoxSession;

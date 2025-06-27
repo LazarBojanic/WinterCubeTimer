@@ -1,4 +1,4 @@
-﻿namespace WinterCubeTimer.forms {
+﻿namespace WinterCubeTimer.view {
     partial class StatsForm {
         /// <summary>
         /// Required designer variable.

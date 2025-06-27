@@ -13,7 +13,20 @@ namespace WinterCubeTimer.model {
             this.stickers = stickers;
         }
         public Side(Side side) {
-            this.stickers = side.stickers;
+            List<Sticker> newStickers = [];
+            foreach (Sticker sticker in side.stickers) {
+                Sticker newSticker = new Sticker(sticker.id, sticker.colorName, sticker.colorNameAsSide, sticker.color);
+                newStickers.Add(newSticker);
+            }
+            stickers = newStickers;
+        }
+        
+        public override string ToString() {
+            string stickersString = "";
+            stickersString += " " + stickers[0].colorNameAsSide + " " + stickers[1].colorNameAsSide + " " + stickers[2].colorNameAsSide + "\n";
+            stickersString += " " + stickers[3].colorNameAsSide + " " + stickers[4].colorNameAsSide + " " + stickers[5].colorNameAsSide + "\n";
+            stickersString += " " + stickers[6].colorNameAsSide + " " + stickers[7].colorNameAsSide + " " + stickers[8].colorNameAsSide + "\n";
+            return stickersString;
         }
     }
 }

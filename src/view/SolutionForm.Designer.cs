@@ -1,4 +1,4 @@
-﻿namespace WinterCubeTimer.forms {
+﻿namespace WinterCubeTimer.view {
     partial class SolutionForm {
         /// <summary>
         /// Required designer variable.

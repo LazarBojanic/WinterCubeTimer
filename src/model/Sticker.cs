@@ -5,8 +5,11 @@ namespace WinterCubeTimer.model {
         public string colorName { get; set; }
         public string colorNameAsSide { get; set; }
         public Color color { get; set; }
-        public Sticker() { 
-            
+        public Sticker() {
+            id = 0;
+            colorName = "";
+            colorNameAsSide = "";
+            color = new Color();
         }
         public Sticker(int id, string colorName, string colorNameAsSide, Color color) {
             this.id = id;
@@ -15,10 +18,10 @@ namespace WinterCubeTimer.model {
             this.color = color;
         }
         public void update(Sticker sticker) {
-            this.id = sticker.id;
-            this.colorName = sticker.colorName;
-            this.colorNameAsSide = sticker.colorNameAsSide;
-            this.color = sticker.color;
+            id = sticker.id;
+            colorName = sticker.colorName;
+            colorNameAsSide = sticker.colorNameAsSide;
+            color = sticker.color;
         }
     }
 }
