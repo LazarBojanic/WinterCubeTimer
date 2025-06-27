@@ -24,7 +24,7 @@ namespace WinterCubeTimer.util {
         public const string DATABASE_FILE_NAME = "times.db";
         public static string DATABASE_FILE_PATH = "config.json";
         public static string DATABASE_CONNECTION_STRING = "Data Source=times.db";
-        public const string DEFAULT_CONFIG_JSON = "{ \"inspection_enabled\": true }";
+        public const string DEFAULT_CONFIG_JSON = "{ \"inspection_enabled\": false }";
         
         public static string serialize<T>(T obj) {
             return JsonSerializer.Serialize(obj);
