@@ -235,6 +235,7 @@ namespace WinterCubeTimer.view {
             SolveTimeUserControl timeUserControl = new SolveTimeUserControl(timeService, this, addedTime);
             flowLayoutPanelTimes.Controls.Add(timeUserControl);
             await updateStats(currentSession);
+            generateScramble();
             await displayScramble();
             displayStats();
             isPlusTwoInInspection = false;
