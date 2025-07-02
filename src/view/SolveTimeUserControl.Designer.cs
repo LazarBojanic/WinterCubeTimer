@@ -97,7 +97,7 @@
             this.Controls.Add(this.checkBoxIsPlusTwo);
             this.Controls.Add(this.labelTime);
             this.Name = "SolveTimeUserControl";
-            this.Size = new System.Drawing.Size(300, 72);
+            this.Size = new System.Drawing.Size(334, 72);
             this.Load += new System.EventHandler(this.TimeUserControl_Load);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TimeUserControl_MouseClick);
             this.MouseEnter += new System.EventHandler(this.TimeUserControl_MouseEnter);

@@ -45,7 +45,7 @@ namespace WinterCubeTimer.view {
         private async void buttonDelete_MouseClick(object sender, MouseEventArgs e) {
             await timeService.delete(solveTime.id);
             winterCubeTimerForm.flowLayoutPanelTimes.Controls.Remove(this);
-            winterCubeTimerForm.updateStats(solveTime.solveSession);
+            await winterCubeTimerForm.updateStats(solveTime.solveSession);
             winterCubeTimerForm.displayStats();
         }
 
@@ -61,7 +61,7 @@ namespace WinterCubeTimer.view {
             solveTime.isPlusTwo = checkBoxIsPlusTwo.Checked;
             labelTime.Text = solveTime.solveTime;
             await timeService.updateIsPlusTwo(solveTime.id, solveTime.isPlusTwo);
-            winterCubeTimerForm.updateStats(solveTime.solveSession);
+            await winterCubeTimerForm.updateStats(solveTime.solveSession);
             winterCubeTimerForm.displayStats();
         }
 

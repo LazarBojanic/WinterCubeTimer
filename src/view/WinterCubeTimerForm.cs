@@ -41,7 +41,7 @@ namespace WinterCubeTimer.view {
             this.timeService = timeService;
             generateScramble();
             validateTables();
-            
+            labelCurrentSession.Text = @"Current Session: " + currentSession;
             solveTimeUserControlList = new List<SolveTimeUserControl>();
             localInspectionEnabled = Config.getInstance().inspectionEnabled;
             isPlusTwoInInspection = false;
@@ -442,15 +442,7 @@ namespace WinterCubeTimer.view {
                 process.Kill();
             }
         }
-
-        private async void buttonSelectSession_MouseClick(object sender, MouseEventArgs e) {
-            currentSession = Convert.ToInt32(comboBoxSession.Text);
-            flowLayoutPanelTimes.Controls.Clear();
-            await fillTimesPanel(currentSession);
-            await updateStats(currentSession);
-            displayStats();
-        }
-
+        
         private async void buttonNewScramble_MouseClick(object sender, MouseEventArgs e) {
             generateScramble();
             await displayScramble();
@@ -514,6 +506,15 @@ namespace WinterCubeTimer.view {
 
         private async void buttonSolveCube_MouseClick(object sender, MouseEventArgs e) {
             await solveCube();
+        }
+
+        private async void comboBoxSession_SelectedValueChanged(object sender, EventArgs e) {
+            currentSession = Convert.ToInt32(comboBoxSession.Text);
+            labelCurrentSession.Text = @"Current Session: " + currentSession;
+            flowLayoutPanelTimes.Controls.Clear();
+            await fillTimesPanel(currentSession);
+            await updateStats(currentSession);
+            displayStats();
         }
     }
 }

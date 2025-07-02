@@ -107,9 +107,9 @@
             labelAverageOfTwelve = new System.Windows.Forms.Label();
             labelAverageOfFive = new System.Windows.Forms.Label();
             comboBoxSession = new System.Windows.Forms.ComboBox();
-            buttonSelectSession = new System.Windows.Forms.Button();
             buttonDeleteAllFromSession = new System.Windows.Forms.Button();
             timerInspection = new System.Windows.Forms.Timer(components);
+            labelCurrentSession = new System.Windows.Forms.Label();
             panelTimer.SuspendLayout();
             panelTimerAndButtons.SuspendLayout();
             panelTurns.SuspendLayout();
@@ -128,7 +128,7 @@
             labelTimer.Anchor = System.Windows.Forms.AnchorStyles.Top;
             labelTimer.AutoSize = true;
             labelTimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F);
-            labelTimer.Location = new System.Drawing.Point(306, 155);
+            labelTimer.Location = new System.Drawing.Point(307, 155);
             labelTimer.Name = "labelTimer";
             labelTimer.Size = new System.Drawing.Size(521, 108);
             labelTimer.TabIndex = 0;
@@ -146,9 +146,9 @@
             panelTimer.Controls.Add(panelTimerAndButtons);
             panelTimer.Controls.Add(panelTurns);
             panelTimer.Controls.Add(panelCube);
-            panelTimer.Location = new System.Drawing.Point(360, 12);
+            panelTimer.Location = new System.Drawing.Point(360, 9);
             panelTimer.Name = "panelTimer";
-            panelTimer.Size = new System.Drawing.Size(1141, 782);
+            panelTimer.Size = new System.Drawing.Size(1141, 785);
             panelTimer.TabIndex = 2;
             // 
             // panelTimerAndButtons
@@ -162,7 +162,7 @@
             panelTimerAndButtons.Controls.Add(labelTimer);
             panelTimerAndButtons.Location = new System.Drawing.Point(3, 3);
             panelTimerAndButtons.Name = "panelTimerAndButtons";
-            panelTimerAndButtons.Size = new System.Drawing.Size(1132, 428);
+            panelTimerAndButtons.Size = new System.Drawing.Size(1135, 431);
             panelTimerAndButtons.TabIndex = 13;
             // 
             // checkBoxInspectionEnabled
@@ -182,7 +182,7 @@
             // 
             buttonSolveCube.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right));
             buttonSolveCube.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            buttonSolveCube.Location = new System.Drawing.Point(966, 355);
+            buttonSolveCube.Location = new System.Drawing.Point(969, 358);
             buttonSolveCube.Name = "buttonSolveCube";
             buttonSolveCube.Size = new System.Drawing.Size(163, 70);
             buttonSolveCube.TabIndex = 12;
@@ -194,7 +194,7 @@
             // 
             buttonNewScramble.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right));
             buttonNewScramble.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            buttonNewScramble.Location = new System.Drawing.Point(966, 3);
+            buttonNewScramble.Location = new System.Drawing.Point(969, 3);
             buttonNewScramble.Name = "buttonNewScramble";
             buttonNewScramble.Size = new System.Drawing.Size(163, 70);
             buttonNewScramble.TabIndex = 8;
@@ -207,7 +207,7 @@
             labelScramble.Anchor = System.Windows.Forms.AnchorStyles.Top;
             labelScramble.AutoSize = true;
             labelScramble.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            labelScramble.Location = new System.Drawing.Point(487, 86);
+            labelScramble.Location = new System.Drawing.Point(488, 86);
             labelScramble.Name = "labelScramble";
             labelScramble.Size = new System.Drawing.Size(152, 37);
             labelScramble.TabIndex = 1;
@@ -218,7 +218,7 @@
             // 
             buttonExportCubeState.Anchor = ((System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left));
             buttonExportCubeState.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            buttonExportCubeState.Location = new System.Drawing.Point(3, 355);
+            buttonExportCubeState.Location = new System.Drawing.Point(3, 358);
             buttonExportCubeState.Name = "buttonExportCubeState";
             buttonExportCubeState.Size = new System.Drawing.Size(163, 70);
             buttonExportCubeState.TabIndex = 11;
@@ -235,7 +235,7 @@
             panelTurns.Controls.Add(buttonUpTurn);
             panelTurns.Controls.Add(buttonBackTurn);
             panelTurns.Controls.Add(buttonRightTurn);
-            panelTurns.Location = new System.Drawing.Point(3, 437);
+            panelTurns.Location = new System.Drawing.Point(3, 440);
             panelTurns.Name = "panelTurns";
             panelTurns.Size = new System.Drawing.Size(456, 342);
             panelTurns.TabIndex = 9;
@@ -327,7 +327,7 @@
             panelCube.Controls.Add(panelUp);
             panelCube.Controls.Add(panelFront);
             panelCube.Controls.Add(panelLeft);
-            panelCube.Location = new System.Drawing.Point(682, 437);
+            panelCube.Location = new System.Drawing.Point(682, 440);
             panelCube.Name = "panelCube";
             panelCube.Size = new System.Drawing.Size(456, 342);
             panelCube.TabIndex = 1;
@@ -876,9 +876,9 @@
             // 
             flowLayoutPanelTimes.AutoScroll = true;
             flowLayoutPanelTimes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            flowLayoutPanelTimes.Location = new System.Drawing.Point(12, 12);
+            flowLayoutPanelTimes.Location = new System.Drawing.Point(12, 32);
             flowLayoutPanelTimes.Name = "flowLayoutPanelTimes";
-            flowLayoutPanelTimes.Size = new System.Drawing.Size(342, 576);
+            flowLayoutPanelTimes.Size = new System.Drawing.Size(342, 556);
             flowLayoutPanelTimes.TabIndex = 3;
             // 
             // panelStats
@@ -893,7 +893,7 @@
             panelStats.Size = new System.Drawing.Size(342, 123);
             panelStats.TabIndex = 4;
             // 
-            // labelBestTime
+            // labelBestTimeOverall
             // 
             labelBestTimeOverall.AutoSize = true;
             labelBestTimeOverall.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
@@ -931,28 +931,17 @@
             comboBoxSession.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" });
             comboBoxSession.Location = new System.Drawing.Point(12, 603);
             comboBoxSession.Name = "comboBoxSession";
-            comboBoxSession.Size = new System.Drawing.Size(80, 39);
+            comboBoxSession.Size = new System.Drawing.Size(115, 39);
             comboBoxSession.TabIndex = 5;
             comboBoxSession.TabStop = false;
-            // 
-            // buttonSelectSession
-            // 
-            buttonSelectSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            buttonSelectSession.Location = new System.Drawing.Point(98, 594);
-            buttonSelectSession.Name = "buttonSelectSession";
-            buttonSelectSession.Size = new System.Drawing.Size(89, 59);
-            buttonSelectSession.TabIndex = 9;
-            buttonSelectSession.TabStop = false;
-            buttonSelectSession.Text = "Select";
-            buttonSelectSession.UseVisualStyleBackColor = true;
-            buttonSelectSession.MouseClick += buttonSelectSession_MouseClick;
+            comboBoxSession.SelectedValueChanged += comboBoxSession_SelectedValueChanged;
             // 
             // buttonDeleteAllFromSession
             // 
             buttonDeleteAllFromSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
-            buttonDeleteAllFromSession.Location = new System.Drawing.Point(193, 594);
+            buttonDeleteAllFromSession.Location = new System.Drawing.Point(133, 594);
             buttonDeleteAllFromSession.Name = "buttonDeleteAllFromSession";
-            buttonDeleteAllFromSession.Size = new System.Drawing.Size(161, 59);
+            buttonDeleteAllFromSession.Size = new System.Drawing.Size(221, 59);
             buttonDeleteAllFromSession.TabIndex = 10;
             buttonDeleteAllFromSession.TabStop = false;
             buttonDeleteAllFromSession.Text = "Delete All From Session";
@@ -963,20 +952,28 @@
             // 
             timerInspection.Tick += timerInspection_Tick;
             // 
+            // labelCurrentSession
+            // 
+            labelCurrentSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)0));
+            labelCurrentSession.Location = new System.Drawing.Point(12, 9);
+            labelCurrentSession.Name = "labelCurrentSession";
+            labelCurrentSession.Size = new System.Drawing.Size(342, 20);
+            labelCurrentSession.TabIndex = 11;
+            labelCurrentSession.Text = "Current Session: ";
+            // 
             // WinterCubeTimerForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1513, 806);
+            Controls.Add(labelCurrentSession);
             Controls.Add(buttonDeleteAllFromSession);
-            Controls.Add(buttonSelectSession);
             Controls.Add(comboBoxSession);
             Controls.Add(panelStats);
             Controls.Add(flowLayoutPanelTimes);
             Controls.Add(panelTimer);
             KeyPreview = true;
             MinimumSize = new System.Drawing.Size(1529, 845);
-            Name = "WinterCubeTimerForm";
             Text = "Winter Cube Timer";
             FormClosing += WinterCubeTimerForm_FormClosing;
             Load += WinterCubeTimerForm_Load;
@@ -997,6 +994,8 @@
             panelStats.PerformLayout();
             ResumeLayout(false);
         }
+
+        private Label labelCurrentSession;
 
         #endregion
 
@@ -1071,14 +1070,13 @@
         private Button buttonUpTurn;
         private Button buttonFrontTurn;
         private Button buttonLeftTurn;
-        public FlowLayoutPanel flowLayoutPanelTimes;
+        public FlowLayoutPanel flowLayoutPanelTimes {get; set;}
         private Panel panelStats;
         private Label labelBestTimeOverall;
         private Label labelAverageOfTwelve;
         private Label labelAverageOfFive;
         private ComboBox comboBoxSession;
         private Button buttonNewScramble;
-        private Button buttonSelectSession;
         private Panel panelTurns;
         private Button buttonDeleteAllFromSession;
         private CheckBox checkBoxInspectionEnabled;
